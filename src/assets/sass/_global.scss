@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+.btn-cadastrar {
+    background: $secondary;
+    box-shadow: 0px 0px 10px $secondary;
+    border-radius: 5px !important;
+    font-family: $font-primary;
+    color: $light;
+    font-family: $font-primary;
+    max-width: 565px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.2s;
+        background: #f09a1abe;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 25px;
+    }
+    @media (min-width: $desktop-4k) {
+        font-size: 1.5vw;
+        max-width: 40vw;
+        height: 6vh;
+    }
+}
+
+
+a, p, h1, h2, h3, h4, h5, h6, span, b {
+    font-family: $font-primary;
+    color: $light;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    text-shadow: 5px 5px 20px $primary;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.primary  {
+    color: $primary;
+}
+.tertiary {
+    color: $tertiary;
+}
+
+/* Variáveis do Form do Active */

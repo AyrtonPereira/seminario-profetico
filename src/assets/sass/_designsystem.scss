@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,400&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://unpkg.com/aos@2.3.1/dist/aos.css');
+
+/* Fonts & Colors */
+$primary: #f09a1a;
+$secondary: #f09a1a;
+$tertiary: #f09a1a;
+$light: #FFFFFF;
+$font-primary: 'Titillium Web';
+$font-secondary: 'Poppins';
+
+/* Breakpoints (based on chrome) */
+$mobile-xs: 320px;
+$mobile-m: 375px;
+$mobile-l: 425px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-large: 1440px;
+$desktop-4k: 1600px;

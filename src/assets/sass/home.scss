@@ -1,0 +1,448 @@
+.container-pr {
+    display: flex;
+    flex-flow: column;
+}
+
+section {
+    padding: 0 3vw;
+}
+
+html {scroll-behavior: smooth;}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background: url('../img/bg-mobile.jpg') no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    @media (min-width: $desktop) {
+        background: url('../img/bg-desk.jpg') no-repeat center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+}
+
+#header {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    opacity: 1;
+    // background: url('../img/logo.png') no-repeat center;
+
+    @media(min-width: $desktop) {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .logo-principal {
+        width: calc(20vh/.48);
+        height: 20vh;
+        display: flex;
+        margin-bottom: .5rem;
+        padding: 3vw;
+
+        @media (min-width: $tablet) {
+            width: 45vw;
+            height: calc(45vw/1.97);
+            padding: 0;
+        }
+        @media (min-width: $desktop) {
+            width: 40vw;
+            height: calc(40vw/1.97);
+        }
+    }
+
+    .block-1 {
+        order: 2;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        @media(min-width: $desktop) {
+            order: 1;
+            width: 60vw;
+            text-align: start;
+            align-items: start;
+        }
+
+        .logo-principal {
+            width: calc(20vh/.48);
+            height: 20vh;
+            display: flex;
+            margin-bottom: .5rem;
+            padding: 3vw;
+
+            @media (min-width: $tablet) {
+                width: 45vw;
+                height: calc(45vw/1.97);
+                padding: 0;
+            }
+            @media (min-width: $desktop) {
+                width: 40vw;
+                height: calc(40vw/1.97);
+            }
+        }
+
+        h1.title-pg-3 { 
+            font-size: 28px; 
+            line-height: 40px;
+            text-transform: uppercase;
+        
+            @media(min-width: $desktop) {
+                font-size: 50px;
+                line-height: 55px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+            @media (min-width: $desktop-4k) {
+                font-size: 3.5vw;
+                line-height: 100%;
+                margin-bottom: 2vh;
+                text-transform: uppercase;
+            }
+        
+        }
+
+        h1 {
+            margin: 0;
+            order: 1;
+            margin-top: 10px;
+            text-transform: uppercase;
+
+            @media(min-width: $desktop) {
+                font-size: 4.5rem;
+                line-height: 40px;
+                margin-bottom: 20px;
+            }
+            @media (min-width: $desktop-4k) {
+                font-size: 3.5vw;
+                line-height: 100%;
+                margin-bottom: 2vh;
+            }
+        }
+
+        .text-1 {
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: 300;
+            margin-bottom: 0;
+            order: 1;
+
+            @media(min-width: $desktop) {
+                font-size: 35px;
+                line-height: 40px;
+                margin-bottom: 20px;
+            }
+            @media (min-width: $desktop-4k) {
+                font-size: 2.8vw;
+                line-height: 100%;
+            }
+        }
+        .text-2 {
+            font-size: 19px;
+            line-height: 25px;
+            order: 2;
+
+            @media(min-width: $desktop) {
+                font-size: 25px;
+            }
+            @media (min-width: $desktop-4k) {
+                font-size: 1.7vw;
+            }
+        }
+        .text-3 {
+            font-family: $font-secondary;
+            font-style: italic;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 3vw;
+            order: 5;
+
+            @media(min-width: $desktop) {
+                font-size: 19px;
+                line-height: 20px;
+                padding: 0;
+                margin: 40px 0;
+                font-weight: 200;
+                order: 4;
+            }
+            @media (min-width: $desktop-4k) {
+                font-size: 1.2vw;
+                line-height: 150%;
+            }
+        }
+        .text-4 {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            order: 4;
+        
+            @media(min-width: $desktop) {
+                display: block;
+                order: 5;
+                font-size: 25px;
+            }
+            @media (min-width: $desktop-4k) {
+                font-size: 1.7vw;
+            }
+            
+        }
+        .btn-cadastrar {
+            margin-top: 1rem;
+            order: 5;
+
+            @media(min-width: $desktop) {
+                margin-top: 2rem;
+            }
+        }
+
+    }
+    .block-2 {
+        order: 1;
+        position: relative;
+        margin-top: 10px;
+
+        @media(min-width: $desktop) {
+            order: 1;
+            width: 40vw;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .ezequiel {
+            width: calc(40vh/1.64);
+            height: 40vh;
+
+            @media (min-width: $tablet) {
+                width: 28vw;
+                height: calc(28vw/.60);
+            }
+            @media (min-width: $desktop) {
+                width: 33vw;
+                height: calc(33vw/.60);
+            }
+        }
+    }
+}
+
+#learn {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+    @media (min-width: $desktop) {
+        margin: 80px 0;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+
+        @media (min-width: $desktop) {
+            font-size: 55px;
+            line-height: 40px;
+        }
+        @media (min-width: $desktop-4k) {
+            font-size: 3.5vw;
+        }
+    }
+
+    .motive-group {
+        @media (min-width: $desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .motive {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-around;
+
+            @media (min-width: $desktop) {
+                flex-flow: row;
+                margin: 5vh 0;
+            }
+            @media (min-width: $desktop-4k) {
+                // max-width: 25vw;
+            }
+
+            .motive-number {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                border-radius: 50px;
+                background-color: $tertiary;
+                font-size: 1rem;
+                font-weight: bold;
+                width: 30px;
+                height: 30px;
+                margin: 0 -1.2rem;
+                z-index: 20;
+
+                @media (min-width: $desktop) {
+                    width: 4vw;
+                    height: 3.5vw;
+                }
+
+                &.pos-1 {
+                    @media (min-width: $desktop) {
+                        order: 1;
+                    }
+                }
+
+                &.pos-2 {
+                    @media (min-width: $desktop) {
+                        order: 2;
+                    }
+                }
+            }
+
+            .motive-text {
+                background-color: gray;
+                border-radius: 5px;
+                padding: 10px 20px;
+                margin: 5px 0 2rem;
+                font-size: 1rem;
+                font-weight: 300;
+                text-transform: uppercase;
+
+                @media (min-width: $tablet) {
+                    order: 1;
+                    width: 100%;
+                }
+                
+                @media (min-width: $desktop) {
+                    font-size: 25px;
+                    margin: 0;
+                }
+                @media (min-width: $desktop-4k) {
+                    font-size: 1.7vw;
+                    line-height: 130%;
+                }
+
+                &.pos-1 {
+                    @media (min-width: $desktop) {
+                        order: 1;
+                    }
+                }
+
+                &.pos-2 {
+                    @media (min-width: $desktop) {
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#mentor {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+
+    span {
+        font-size: 25px;
+        font-weight: bold;
+
+        @media (min-width: $desktop) {
+            font-size: 55px;
+            // line-height: 40px;
+        }
+        @media (min-width: $desktop-4k) {
+            font-size: 3.5vw;
+        }
+    }
+
+    video {
+        height: 20vh;
+        width: calc(20vh/.56);
+        margin: 15px 0;
+
+        @media (min-width: $desktop){
+            width: 50vw;
+            height: calc(50vw*.56);
+        }
+    }
+
+    h1 {
+        line-height: 0;
+
+        @media (min-width: $desktop) {
+            font-size: 50px;
+            line-height: 40px;
+            font-weight: 600;
+            margin-top: 50px;
+        }
+        @media (min-width: $desktop-4k) {
+            font-size: 3vw;
+            margin-top: 6vh;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 300;
+
+        @media (min-width: $desktop) {
+            font-size: 25px;
+            padding: 0 10vw;
+        }
+        @media (min-width: $desktop-4k) {
+            font-size: 2vw;
+            line-height: 130%;
+        }
+    }
+
+    .btn-cadastrar {
+        width: 90%;
+        margin-top: 30px;
+
+        @media (min-width: $desktop) {
+            margin-top: 50px;
+            height: unset;
+            padding: 2vh 0;
+        }
+    }
+}
+
+footer {
+    font-family: $font-secondary;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 0 10vw;
+
+
+    @media (min-width: $desktop) {
+        font-size: 20px;
+        padding: 0 20vw;
+        margin-top: 40px;
+    }
+    @media (min-width: $desktop-4k) {
+        font-size: 1.7vw;
+        line-height: 130%;
+    }
+
+    p {
+        margin: 50px 0;
+    }
+}

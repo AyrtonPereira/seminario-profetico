@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br, en">
+
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <link rel='icon' type='image/png' href='logo.png'>
+        <link rel='stylesheet' href='./assets/css/_main.css'>
+        
+          <!-- Primary Meta Tags -->
+        <title>Seminário Profético - Todos Podem Profetizar</title>
+        <meta name='title' content='Seminário Profético'>
+        <meta name='description' content='Aprenda os segredos do ministério profético'>
+        <!-- Open Graph / Facebook -->
+        <meta property='og:type' content='website'>
+        <meta property='og:url' content='https://nexys.in/seminario-profetico/'>
+        <meta property='og:title' content='Seminário Profético - Todos podem profetizar'>
+        <meta property='og:description' content='Aprenda os segredos do ministério profético'>
+        <meta property='og:image' content='./logo.png'>
+        <!-- Twitter -->
+        <meta property='twitter:card' content='summary_large_image'>
+        <meta property='twitter:url' content='https://nexys.in/seminario-profetico/'>
+        <meta property='twitter:title' content='Seminário Profético - Todos podem profetizar'>
+        <meta property='twitter:description' content='Aprenda os segredos do ministério profético'>
+        <meta property='twitter:image' content='./logo.png'>
+    </head>
+
+    <body>
+        <div id="thanks" class="container">
+            <section id="header">
+                <img src="./assets/img/logo.png" alt="Logo O Sobrevivente">
+                <h1>PARABÉNS, SUA INSCRIÇÃO FOI REALIZADA</h1>
+                <p>Para garantir a sua vaga, é necessário realizar o pagamento do seminário.</p>
+                <div class="payment-box">
+                    <div class="block-pix">
+                        <h2>Pix<h2>
+                        <p> mail.ezequiel@gmail.com </br>
+                            Nubank - 0001 </br>
+                            C/C - 71283332-2 </br>
+                            Ezequiel Machado </br>
+                        </p>
+                        <p style="margin-top: 15px; font-weight: bold;">Enviar comprovante para: </br> Fernanda Leal (11 94754-5531)</p>
+                    </div>
+                    <div class="block-card">
+                        <h2>Cartão de Crédito<h2>
+                        <button id="card-link" class="thanks-btn">CLIQUE AQUI PARA RECEBER O LINK</button>
+                    </div>
+                </div>
+            </section>
+            <footer data-aos="fade-in" data-aos-duration="1000">
+                <p>Seminário Profético: Todos podem profetizar - Todos os direitos reservados.</p>
+            </footer>
+        </div>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7V9WHH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            AOS.init();
+
+            $(document).ready(function(){
+                $('#link-text').hide();
+                
+                $("#card-link").on('click', function() {                    
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const myParam = urlParams.get('email');
+                    
+                    if (myParam == '') {
+                        Swal.fire(
+                            'Opps',
+                            'Não existe e-mail registrado, tem certeza que veio da página de cadastro?',
+                            'error'
+                        )
+                    }
+                    
+                    $.ajax({
+                        type: "POST",
+                        url: `https://nexys-api.herokuapp.com/event-registration/payment/${myParam}`,
+                        data: {
+                            paymentMethod: 'credit_card',
+                        },
+                        success: function(data)
+                        {
+                            if (data.status == 'success') Swal.fire(
+                                'Feito!',
+                                'O link foi solicitado e será enviado em até 24h para o e-mail informado',
+                                'success'
+                            )
+                            else Swal.fire(
+                                'Opps',
+                                'Ocorreu um erro ao solicitar o link, entre em contato com a Fernanda',
+                                'error'
+                            )
+                        }
+                    });
+                });  
+            })
+        </script>
+    </body>
+
+</html>

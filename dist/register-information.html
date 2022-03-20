@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="pt-br, en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="icon" type="image/png" href="logo.png"><link rel="stylesheet" href="./assets/css/_main.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"><title>Seminário Profético - Todos Podem Profetizar</title><meta name="title" content="Seminário Profético"><meta name="description" content="Aprenda os segredos do ministério profético"><meta property="og:type" content="website"><meta property="og:url" content="https://nexys.in/seminario-profetico/"><meta property="og:title" content="Seminário Profético - Todos podem profetizar"><meta property="og:description" content="Aprenda os segredos do ministério profético"><meta property="og:image" content="./logo.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://nexys.in/seminario-profetico/"><meta property="twitter:title" content="Seminário Profético - Todos podem profetizar"><meta property="twitter:description" content="Aprenda os segredos do ministério profético"><meta property="twitter:image" content="./logo.png"></head><body><div class="container-pr"><section id="header" style="display: flex; flex-flow: column;"><div class="flex table-responsive"><img class="logo-principal" src="./assets/img/logo.png" alt="Todos podem profetizar"><div class="table-responsive"><table class="table table-bordered table-sm table-striped" style="background: white"><thead><tr><th>N</th><th>Nome</th><th>E-mail</th><th>Celular</th><th>UF</th><th>Igreja</th><th>Forma de Pagamento</th><th>Status</th><th>Atualizar Pagto</th></tr></thead><tbody id="table-body"></tbody></table></div></div></section></div><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><script>AOS.init();
+
+        $(document).ready(function() {
+                
+            $.ajax({
+                type: "GET",
+                url: 'http://nexys-api.herokuapp.com/event-registration',
+                success: function(data){
+                    if (data){
+                        data.map((member, index) => {
+                            let payment = member.paymentMethod == 'credit_card' ? 'Cartão de Crédito' : 'Pix'
+                            let status = member.paymentStatus == 'pending' ? 'Pagamento Pendente' : 'Pago'
+                            
+                            $('#table-body').append(`
+                            <tr>
+                                <td>${index}</td>
+                                <td>${member.memberName}</td>
+                                <td>${member.memberEmail}</td>
+                                <td>${member.memberPhone}</td>
+                                <td>${member.memberUF}</td>
+                                <td>${member.memberChurch}</td>
+                                <td>${payment}</td>
+                                <td>${status}</td>
+                                <td><button class="btn btn-sm ${status == 'Pago' ? 'btn-danger' : 'btn-primary'} btn-pagto" data-email="${member.memberEmail}" data-status="${status == 'Pago' ? 'pending' : 'paid'}" >${status == 'Pago' ? 'Remover' : 'Pagar'}</button></td>
+                            </tr>
+                            `)
+                        })
+                    }
+                }
+            });
+        
+            $(document).on('click', '.btn-pagto', function(){
+                let email = $(this).data('email');
+                let newStatus = $(this).data('status');
+
+                $.ajax({
+                    type: "POST",
+                    url: `https://nexys-api.herokuapp.com/event-registration/payment/${email}`,
+                    data: {
+                        paymentStatus: newStatus
+                    },
+                    success: function(data){
+                        if (data) window.location.reload();
+                    }
+                });
+            })
+        })</script></body></html>

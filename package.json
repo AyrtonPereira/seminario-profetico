@@ -1,0 +1,33 @@
+{
+  "name": "Sobrevivente",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "grunt dev",
+    "build": "grunt build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.4.1",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-optipng": "^6.0.0",
+    "imagemin-svgo": "^7.1.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^6.0.0"
+  }
+}

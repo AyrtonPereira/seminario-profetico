@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br, en">
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <link rel='icon' type='image/png' href='logo.png'>
+    <link rel='stylesheet' href='./assets/css/_main.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+    <!-- Primary Meta Tags -->
+    <title>Seminário Profético - Todos Podem Profetizar</title>
+    <meta name='title' content='Seminário Profético'>
+    <meta name='description' content='Aprenda os segredos do ministério profético'>
+    <!-- Open Graph / Facebook -->
+    <meta property='og:type' content='website'>
+    <meta property='og:url' content='https://nexys.in/seminario-profetico/'>
+    <meta property='og:title' content='Seminário Profético - Todos podem profetizar'>
+    <meta property='og:description' content='Aprenda os segredos do ministério profético'>
+    <meta property='og:image' content='./logo.png'>
+    <!-- Twitter -->
+    <meta property='twitter:card' content='summary_large_image'>
+    <meta property='twitter:url' content='https://nexys.in/seminario-profetico/'>
+    <meta property='twitter:title' content='Seminário Profético - Todos podem profetizar'>
+    <meta property='twitter:description' content='Aprenda os segredos do ministério profético'>
+    <meta property='twitter:image' content='./logo.png'>
+</head>
+
+<body>
+    <div class="container-pr">
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-dark" id="exampleModalCenterTitle">Inscrição</h5>
+                  <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-dark">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form" method="POST" action="http://nexys-api.herokuapp.com/event-registration">
+                        <input type="hidden" class="form-control" name="eventID" value="61d246a25f9e7bef040f4ffb">
+                        <div class="form-group">
+                          <label>Nome e Sobrenome</label>
+                          <input type="text" class="form-control" name="memberName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" id="memberEmail" class="form-control" name="memberEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Whatsapp</label>
+                            <input type="text" class="form-control" name="memberPhone" required>
+                          </div>
+                          <div class="form-group">
+                            <label>UF</label>
+                            <input type="text" class="form-control" name="memberUF" required>
+                          </div>
+                          <div class="form-group">
+                            <label>Igreja</label>
+                            <input type="text" class="form-control" name="memberChurch" required>
+                        </div>
+                        <div class="form-group">
+                            <span class="text-dark">Valor do investimento: <span class="text-dark" style="text-decoration: line-through">R$ 349,90</span> R$ 299,90</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span id="submit-text">Enviar</span>
+                            <div class="spinner-border spinner-border-sm" role="status" id="submit-spinner">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        <section id="header">
+            <div class="block-1">
+                <img class="logo-principal" src="./assets/img/logo.png" alt="Pr Ezequiel Machado">
+                <p class="text-3">“Certamente, o SENHOR Deus não fará coisa alguma, sem primeiro revelar o seu segredo aos seus servos, os profetas. Amós 3:7”</p>
+                <span class="text-4">07 de Maio, às 9h - Espaço Fit SP</span>
+                <span class="text-4">Valor do Investimento: <span style="text-decoration: line-through">R$ 349,90</span> R$ 299,90</span>
+                <button class="btn-cadastrar" data-toggle="modal" data-target="#exampleModalCenter">QUERO PARTICIPAR</button>
+            </div>
+            <div class="block-2">
+                <img class="ezequiel" src="./assets/img/ezequiel.png" alt="Pr Ezequiel Machado">
+            </div>
+        </section>
+        <section id="learn" data-aos="fade-up" data-aos-duration="1000">
+            <h2>O QUE VOCÊ VAI APRENDER</h2>
+            <div class="motive-group" data-aos="fade-right" data-aos-duration="1000">
+                <div class="motive">
+                    <div class="motive-number pos-2">
+                        <span>1</span>
+                    </div>
+                    <p class="motive-text pos-1">Todos podem profetizar, </br> até mesmo aqueles de um talento</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-left" data-aos-duration="1000">
+                <div></div>
+                <div class="motive">
+                    <div class="motive-number pos-1">
+                        <span>2</span>
+                    </div>
+                    <p class="motive-text pos-2">Dons não correm atrás de você, </br>você quem corre atrás deles</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-right" data-aos-duration="1000">
+                <div class="motive">
+                    <div class="motive-number pos-2">
+                        <span>3</span>
+                    </div>
+                    <p class="motive-text pos-1">Dons são recebidos e não comprados</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-left" data-aos-duration="1000">
+                <div></div>
+                <div class="motive">
+                    <div class="motive-number pos-1">
+                        <span>4</span>
+                    </div>
+                    <p class="motive-text pos-2">Talentos precisam ser negociados </br>e não enterrados</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-right" data-aos-duration="1000">
+                <div class="motive">
+                    <div class="motive-number pos-2">
+                        <span>5</span>
+                    </div>
+                    <p class="motive-text pos-1">O Espírito Santo não substitui, Ele coopera</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-left" data-aos-duration="1000">
+                <div></div>
+                <div class="motive">
+                    <div class="motive-number pos-1">
+                        <span>6</span>
+                    </div>
+                    <p class="motive-text pos-2">A simplicidade promove o sobrenatural</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-right" data-aos-duration="1000">
+                <div class="motive">
+                    <div class="motive-number pos-2">
+                        <span>7</span>
+                    </div>
+                    <p class="motive-text pos-1">Profetas profetizam conforme a dispensação</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-left" data-aos-duration="1000">
+                <div></div>
+                <div class="motive">
+                    <div class="motive-number pos-1">
+                        <span>8</span>
+                    </div>
+                    <p class="motive-text pos-2">Parte conhecemos e parte profetizamos</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-right" data-aos-duration="1000">
+                <div class="motive">
+                    <div class="motive-number pos-2">
+                        <span>9</span>
+                    </div>
+                    <p class="motive-text pos-1">Deus não faz nada sem primeiro </br> falar com seus profetas</p>
+                </div>
+            </div>
+            <div class="motive-group" data-aos="fade-left" data-aos-duration="1000">
+                <div></div>
+                <div class="motive">
+                    <div class="motive-number pos-1">
+                        <span>10</span>
+                    </div>
+                    <p class="motive-text pos-2">Um coração profético sempre </br> centraliza o Senhorio de Cristo</p>
+                </div>
+            </div>
+        </section>
+        <section id="mentor" data-aos="fade-up" data-aos-duration="500">
+            <span>VEJA COMO FOI O ÚLTIMO SEMINÁRIO</span>
+            <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+                <source src="./assets/img/preview.mp4" type="video/mp4" />              
+                <!-- Captions are optional -->
+                <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default />
+            </video>
+            <button class="btn-cadastrar" data-toggle="modal" data-target="#exampleModalCenter">QUERO PARTICIPAR</button>
+        </section>
+        <footer data-aos="fade-up" data-aos-duration="1000">
+            <p style="font-style: italic; font-weight: 100">“Segui o amor e procurai, com zelo, os dons espirituais, mas principalmente que profetizeis. 1 Coríntios 14:1”</p>
+            <p>Seminário Profético: Todos podem profetizar - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        AOS.init();
+
+        $(document).ready(function() {
+            $('#submit-spinner').hide();
+
+            $("#form").submit(function(e) {
+                e.preventDefault();
+                $('#submit-text').hide();
+                $('#submit-spinner').show();
+    
+                var form = $(this);
+                var url = form.attr('action');
+                var email = $('#memberEmail').val()
+                
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: form.serialize(), // serializes the form's elements.
+                    success: function(data)
+                    {
+                        if (data.status == "success"){
+                            window.location.href=`http://seminario-profetico.nexys.in/obrigado.html?email=${email}`
+                        } else {
+                            Swal.fire(
+                                'oops!',
+                                'E-mail já inscrito',
+                                'error'
+                            )
+                        }
+                        $('#submit-text').show();
+                        $('#submit-spinner').hide();
+                    }
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>
