@@ -270,7 +270,22 @@ body {
             @media (min-width: $desktop-4k) {
                 font-size: 1.7vw;
             }
-            
+        }
+        .text-5 {
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+            margin-top: 10px;
+            order: 4;
+        
+            @media(min-width: $desktop) {
+                display: block;
+                order: 5;
+                font-size: 20px;
+            }
+            @media (min-width: $desktop-4k) {
+                font-size: 1.3vw;
+            }
         }
         .btn-cadastrar {
             margin-top: 1rem;

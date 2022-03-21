@@ -218,6 +218,20 @@ body {
       @media (min-width: 1600px) {
         #header .block-1 .text-4 {
           font-size: 1.7vw; } }
+    #header .block-1 .text-5 {
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 400;
+      margin-top: 10px;
+      order: 4; }
+      @media (min-width: 1024px) {
+        #header .block-1 .text-5 {
+          display: block;
+          order: 5;
+          font-size: 20px; } }
+      @media (min-width: 1600px) {
+        #header .block-1 .text-5 {
+          font-size: 1.3vw; } }
     #header .block-1 .btn-cadastrar {
       margin-top: 1rem;
       order: 5; }
