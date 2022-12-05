@@ -1,33 +1,36 @@
 {
-  "name": "Sobrevivente",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "front-prophetic-seminar",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "grunt dev",
-    "build": "grunt build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:e2e": "start-server-and-test preview :4173 'cypress run --e2e'",
+    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' :4173 'cypress open --e2e'",
+    "test:unit": "cypress run --component",
+    "test:unit:dev": "cypress open --component",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "grunt": "^1.4.1",
-    "grunt-cli": "^1.4.3",
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-sass": "^2.0.0",
-    "grunt-contrib-uglify": "^5.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-optipng": "^6.0.0",
-    "imagemin-svgo": "^7.1.0"
+    "@headlessui/vue": "^1.7.4",
+    "@heroicons/vue": "^2.0.13",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "grunt-contrib-htmlmin": "^3.1.0",
-    "grunt-contrib-imagemin": "^4.0.0",
-    "grunt-sass": "^3.1.0",
-    "node-sass": "^6.0.0"
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "autoprefixer": "^10.4.13",
+    "cypress": "^11.2.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "postcss": "^8.4.19",
+    "prettier": "^2.7.1",
+    "start-server-and-test": "^1.14.0",
+    "tailwindcss": "^3.2.4",
+    "vite": "^3.2.4"
   }
 }
