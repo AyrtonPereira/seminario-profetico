@@ -14,22 +14,22 @@
         </div>
         <div class="hidden justify-between md:flex">
           <a
-            href="#"
+            href="#home"
             class="text-base font-medium text-gray-500 hover:text-gray-900 mx-2"
             >Home</a
           >
           <a
-            href="#"
+            href="#about"
             class="text-base font-medium text-gray-500 hover:text-gray-900 mx-2"
             >Sobre</a
           >
           <a
-            href="#"
+            href="#depositions"
             class="text-base font-medium text-gray-500 hover:text-gray-900 mx-2"
             >Depoimentos</a
           >
           <a
-            href="#"
+            href="#schedule"
             class="text-base font-medium text-gray-500 hover:text-gray-900 mx-2"
             >Agenda</a
           >

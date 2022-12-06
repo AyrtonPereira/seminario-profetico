@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div id="main-container" class="h-screen w-screen">
+  <div id="main-container" class="h-screen scroll-smooth">
     <RouterView />
   </div>
 </template>
