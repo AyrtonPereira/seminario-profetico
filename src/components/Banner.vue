@@ -1,10 +1,10 @@
 <script setup>
 </script>
 <template lang="">
-  <div class="flex flex-col-reverse md:flex-row justify-around h-80">
+  <div class="flex flex-col-reverse md:flex-row justify-around h-full">
     <div class="w-full flex items-center">
       <div class="flex flex-col items-center justify-center w-full">
-        <h1 class="text-2xl">Seminário Profético</h1>
+        <h1 class="text-6xl">Seminário Profético</h1>
         <p>A sua vida jamais será a mesma</p>
       </div>
     </div>
@@ -23,5 +23,4 @@
     height: calc(28vw / .6);
   }
 }
-
 </style>

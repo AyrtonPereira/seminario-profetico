@@ -8,26 +8,27 @@ import Footer from "@/components/Footer.vue";
 </script>
 <template>
   <div id="home-body" class="scroll-smooth">
-    <Header  />
-    <Banner id="home" />
-    <LastEdition id="about" />
+    <div class="md:h-screen">
+      <Header />
+      <Banner id="home" />
+    </div>
+    <LastEdition id="about" class="h-96" />
     <Depositions id="depositions" />
     <schedule id="schedule" />
     <Footer />
   </div>
 </template>
 <style lang="scss" scoped>
-  #home-body {
-    background: url('@/assets/images/bg-mobile.png') no-repeat center;
+#home-body {
+  background: url("@/assets/images/bg-mobile.png") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  @media (min-width: 768px) {
+    background: url("@/assets/images/bg-desk.png") no-repeat center;
     background-attachment: fixed;
     background-size: cover;
-
-    @media (min-width: 768px) {
-      background: url('@/assets/images/bg-desk.png') no-repeat center;
-      background-attachment: fixed;
-      background-size: cover;
-      backdrop-filter: blur(10px);
-    }
-
+    backdrop-filter: blur(10px);
   }
+}
 </style>
