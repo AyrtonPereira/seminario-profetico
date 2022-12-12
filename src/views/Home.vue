@@ -8,11 +8,11 @@ import Footer from "@/components/Footer.vue";
 </script>
 <template>
   <div id="home-body" class="scroll-smooth">
-    <div class="md:h-screen">
+    <div class="md:min-h-screen">
       <Header />
       <Banner id="home" />
     </div>
-    <LastEdition id="about" class="h-96" />
+    <LastEdition id="about" />
     <Depositions id="depositions" />
     <schedule id="schedule" />
     <Footer />
