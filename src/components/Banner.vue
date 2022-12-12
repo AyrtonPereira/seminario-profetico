@@ -1,37 +1,22 @@
 <script setup></script>
 <template lang="">
-  <div class="relative px-6 lg:px-8 flex items-center">
+  <div class="relative px-6 lg:px-8 flex flex-col-reverse justify-center md:items-center lg:flex-row min-h-screen md:min-h-none ">
     <div class="mx-auto max-w-3xl">
       <div>
-        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div
-            class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-          >
-            <span class="text-gray-600">
-              Announcing our next round of funding.
-              <a href="#" class="font-semibold text-indigo-600"
-                ><span class="absolute inset-0" aria-hidden="true" />Read more
-                <span aria-hidden="true">&rarr;</span></a
-              >
-            </span>
-          </div>
-        </div>
-        <div>
-          <h1
-            class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl"
-          >
+        <div class="flex flex-col text-center items-center">
+          <h1 class="text-4xl tracking-tight sm:text-center sm:text-6xl">
             Seminário
-            <span class="text-blue-200 font-bold">Profético</span>
+            <span class="font-bold">Profético</span>
           </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center text-white">
+          <p class="mt-6 md:text-lg leading-5 md:leading-8 text-gray-600 sm:text-center text-white">
             “Certamente, o SENHOR Deus não fará coisa alguma, sem primeiro revelar o seu segredo aos seus servos, os profetas. Amós 3:7”
           </p>
-          <div class="mt-8 flex gap-x-4 sm:justify-center">
+          <div class="mt-8 flex gap-x-4 sm:justify-center mb-5">
             <a
-              href="#"
+              href="#schedule"
               class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
             >
-              Inscreva-se
+              Próximos Eventos
               <span class="text-indigo-200" aria-hidden="true">&rarr;</span>
             </a>
           </div>

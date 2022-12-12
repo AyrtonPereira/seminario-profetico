@@ -2,9 +2,9 @@
   <div class="bg-white py-24 sm:py-32 lg:py-40">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="sm:text-center">
-        <h2 class="text-lg font-semibold leading-8 text-indigo-600">Transactions</h2>
-        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better way to send money</p>
-        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
+        <h2 class="text-lg font-semibold leading-8 text-indigo-600">Sobre o Seminário</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Como despertar e fluir no mover profético</p>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">Existem pessoas que passam a vida cristã inteira sem desfrutar de um dos maiores dons que o Senhor liberou para a igreja: o dom profético!</p>
       </div>
 
       <div class="mt-20 max-w-lg sm:mx-auto md:max-w-none">
@@ -39,18 +39,6 @@ const features = [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: ScaleIcon,
-  },
-  {
-    name: 'Transfers are instant',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: BoltIcon,
-  },
-  {
-    name: 'Mobile notifications',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: DevicePhoneMobileIcon,
-  },
+  }
 ]
 </script>
