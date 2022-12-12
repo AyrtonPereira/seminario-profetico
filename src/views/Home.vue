@@ -9,8 +9,8 @@ import Footer from "@/components/Footer.vue";
 <template>
   <div id="home-body" class="scroll-smooth">
     <div class="md:min-h-screen">
-      <Header />
-      <Banner id="home" />
+      <Header class="z-10" />
+      <Banner class="z-0" id="home" />
     </div>
     <LastEdition id="about" />
     <Depositions id="depositions" />
