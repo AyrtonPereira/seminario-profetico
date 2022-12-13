@@ -22,13 +22,13 @@
           <div class="bg-gray-100 rounded p-2 md:p-4 shadow-md">
             <h3 class="mt-2 text-2xl font-bold tracking-tight md:text-4xl text-center">A agenda está fechada</h3>
           <p class="text-center mx-auto mt-6 max-w-2xl text-sm leading-6 text-gray-600 md:leading-6 md:text-lg">Por enquanto não existe nenhum
-            seminário agendado. Fique ligado nas mídias sociais para companhar as próximas datas.</p>
+            seminário agendado. Fique ligado nas mídias sociais para acompanhar as próximas datas.</p>
           </div>
         </div>
-        <div class="hidden lg:flex w-1/3 lg:justify-end"> 
+        <!-- <div class="hidden lg:flex w-1/3 lg:justify-end"> 
           <img id="image-ezequiel" src="@/assets/images/ezequiel.png"
             alt="Imagem do pastor /Ezequiel com o braço direito erguido" />
-          </div>
+          </div>-->
       </div>
     </div>
   </div>
@@ -37,38 +37,7 @@
 <script setup>
 import { CalendarIcon } from '@heroicons/vue/24/outline'
 
-const events = [
-  {
-    date: '12/12/2022',
-    local: 'Videira Interlagos',
-    state: 'São Paulo - SP',
-  },
-  {
-    date: '12/12/2022',
-    local: 'Videira Interlagos',
-    state: 'São Paulo - SP',
-  },
-  {
-    date: '12/12/2022',
-    local: 'Videira Interlagos',
-    state: 'São Paulo - SP',
-  },
-  {
-    date: '12/12/2022',
-    local: 'Videira Interlagos',
-    state: 'São Paulo - SP',
-  },
-  {
-    date: '12/12/2022',
-    local: 'Videira Interlagos',
-    state: 'São Paulo - SP',
-  },
-  {
-    date: '12/12/2022',
-    local: 'Videira Interlagos',
-    state: 'São Paulo - SP',
-  }
-];
+const events = [];
 /* [
   {
     date: '12/12/2022',
