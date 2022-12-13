@@ -20,12 +20,12 @@ import Footer from "@/components/Footer.vue";
 </template>
 <style lang="scss" scoped>
 #home-body {
-  background: url("@/assets/img/bg-mobile.webp") no-repeat center;
+  background: url("https://seminario-profetico.s3.amazonaws.com/bg-mobile.webp") no-repeat center;
   background-attachment: fixed;
   background-size: cover;
 
   @media (min-width: 768px) {
-    background: url("@/assets/img/bg-desk.webp") no-repeat center;
+    background: url("https://seminario-profetico.s3.amazonaws.com/bg-desk.webp") no-repeat center;
     background-attachment: fixed;
     background-size: cover;
     backdrop-filter: blur(10px);
