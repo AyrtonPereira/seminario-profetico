@@ -45,7 +45,8 @@ let depositions = [
 ]
 
 depositions.forEach(element => {
-  element.imageUrl = new URL(`/src/assets/images/${element.photo}`, import.meta.url).pathname
+  element.imageUrl = new URL(`/src/assets/img/${element.photo}`, import.meta.url).href
+  console.log(element.imageUrl)
 });
 
 </script>
