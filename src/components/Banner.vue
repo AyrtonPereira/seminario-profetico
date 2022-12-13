@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="h-full flex items-center w-full justify-center">
-      <img id="image-ezequiel" src="@/assets/img/ezequiel.png" alt="Imagem do pastor Ezequiel com o braço direito erguido" />
+      <img id="image-ezequiel" src="@/assets/img/ezequiel.webp" alt="Imagem do pastor Ezequiel com o braço direito erguido" />
     </div>
   </div>
 </template>

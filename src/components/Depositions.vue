@@ -28,7 +28,7 @@ let depositions = [
     name: 'Ayrton Pereira',
     declarations: 'No seminário o Senhor reavivou o meu chamado pastoral e ativou um novo nível de ousadia na minha vida. Aprendi que a minha palavra tem poder e que eu preciso fluir nos dons diariamente.',
     event: '4º Edição do Seminário',
-    photo:'ayrton-pereira'
+    photo:'https://seminario-profetico.s3.amazonaws.com/ayrton-pereira.webp'
   },
   {
     name: 'Elisabete dos Santos',
@@ -46,7 +46,6 @@ let depositions = [
 
 depositions.forEach(element => {
   element.imageUrl = new URL(`/src/assets/img/${element.photo}.jpeg`, import.meta.url).href
-  console.log(element.imageUrl)
 });
 
 </script>
@@ -80,7 +79,7 @@ depositions.forEach(element => {
         style="align-self: center;">
         <div class=" w-1/4 flex justify-center">
           <img v-if="deposition.photo" class="inline-block h-auto w-20 rounded-full ring-2 ring-white"
-            :src="deposition.imageUrl" alt="" />
+            :src="deposition.photo" alt="" />
 
         </div>
         <div class="w-full px-2 text-center md:w-3/4 flex flex-col items-center text-left font-semibold">
