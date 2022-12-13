@@ -9,10 +9,10 @@
       </p>
       <div class="flex items-center justify-evenly text-gray-600 pt-3">
         <a href="https://m.facebook.com/profile.php?id=100000763495394" target="_blank">
-          <img class="w-8 h-8 md:w-10 md:h-10 mr-3" src="@/assets/images/facebook.svg" />
+          <img class="w-8 h-8 md:w-10 md:h-10 mr-3" src="@/assets/img/facebook.svg" />
         </a>
         <a href="https://www.instagram.com/ezequielmachado_oficial/" target="_blank">
-          <img class="w-8 h-8 md:w-10 md:h-10" src="@/assets/images/instagram.svg" />
+          <img class="w-8 h-8 md:w-10 md:h-10" src="@/assets/img/instagram.svg" />
         </a>
       </div>
     </div>

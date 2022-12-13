@@ -10,43 +10,39 @@ let depositions = [
     name: 'Carolina Rocha',
     declarations: 'Durante o seminário, Deus me entregou palavras que testificaram no coração das pessoas que eu entreguei e o Senhor me usou no culto do mesmo final de semana para liberar a cura sobre a vida de uma senhora.',
     event: '1º Edição do Seminário',
-    photo:'carolina-rocha.jpeg'
+    photo:'https://seminario-profetico.s3.amazonaws.com/carolina-rocha.webp'
   },
   {
     name: 'Luana Melo',
     declarations: 'Participar do seminário profético, verdadeiramente marcou a minha vida. Recebi chaves espirituais para fluir mais no Espírito e aprendi que o dom de profetizar está à disposição de todos que desejam e o buscam em Deus.',
     event: '4º Edição do Seminário',
-    photo:'luana-melo.jpeg' 
+    photo:'https://seminario-profetico.s3.amazonaws.com/luana-melo.webp' 
   },
   {
     name: 'Priscila Martins',
     declarations: 'O Seminário Profético foi um marco em minha vida. Eu era uma pessoa antes e me tornei outra depois. Eu compreendi que Deus usa a todos mesmo aqueles que se sentem improváveis para liberar uma palavra Profética.',
     event: '4º Edição do Seminário',
-    photo:'priscila-martins.jpeg'
+    photo:'https://seminario-profetico.s3.amazonaws.com/priscila-martins.webp'
   },
   {
     name: 'Ayrton Pereira',
     declarations: 'No seminário o Senhor reavivou o meu chamado pastoral e ativou um novo nível de ousadia na minha vida. Aprendi que a minha palavra tem poder e que eu preciso fluir nos dons diariamente.',
     event: '4º Edição do Seminário',
-    photo:'ayrton-pereira.jpeg'
+    photo:'https://seminario-profetico.s3.amazonaws.com/ayrton-pereira.webp'
   },
   {
     name: 'Elisabete dos Santos',
     declarations: 'Aprendi no seminário profético que o Senhor entrega talentos a todos os seu filhos e devemos multiplica-los. Percebi que o dom de profecia está em nós, mas devemos aprimora-los.',
     event: '4º Edição do Seminário',
-    photo:'elisabete-santos.jpeg'
+    photo:'https://seminario-profetico.s3.amazonaws.com/elisabete-santos.webp'
   },
   {
     name: 'Juliana Oliveira',
     declarations: 'O Seminário profético me fez aperfeiçoar o discernimento que Deus já tinha liberado sobre minha vida. Foi sensacional.',
     event: '4º Edição do Seminário',
-    photo:'juliana-oliveira.jpg '
+    photo:'https://seminario-profetico.s3.amazonaws.com/juliana-oliveira.webp'
   }
 ]
-
-depositions.forEach(element => {
-  element.imageUrl = new URL(`/src/assets/images/${element.photo}`, import.meta.url).href
-});
 
 </script>
 <template>
@@ -79,7 +75,7 @@ depositions.forEach(element => {
         style="align-self: center;">
         <div class=" w-1/4 flex justify-center">
           <img v-if="deposition.photo" class="inline-block h-auto w-20 rounded-full ring-2 ring-white"
-            :src="deposition.imageUrl" alt="" />
+            :src="deposition.photo" alt="" />
 
         </div>
         <div class="w-full px-2 text-center md:w-3/4 flex flex-col items-center text-left font-semibold">
